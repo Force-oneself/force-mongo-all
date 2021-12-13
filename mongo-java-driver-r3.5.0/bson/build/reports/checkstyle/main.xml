@@ -1,0 +1,497 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<checkstyle version="7.4">
+<file name="/Users/forceoneself/IdeaProjects/force-mongo-all/mongo-java-driver-r3.5.0/bson/src/main/org/bson/AbstractBsonReader.java">
+</file>
+<file name="/Users/forceoneself/IdeaProjects/force-mongo-all/mongo-java-driver-r3.5.0/bson/src/main/org/bson/AbstractBsonWriter.java">
+</file>
+<file name="/Users/forceoneself/IdeaProjects/force-mongo-all/mongo-java-driver-r3.5.0/bson/src/main/org/bson/BSONException.java">
+</file>
+<file name="/Users/forceoneself/IdeaProjects/force-mongo-all/mongo-java-driver-r3.5.0/bson/src/main/org/bson/BsonArray.java">
+</file>
+<file name="/Users/forceoneself/IdeaProjects/force-mongo-all/mongo-java-driver-r3.5.0/bson/src/main/org/bson/BsonBinary.java">
+</file>
+<file name="/Users/forceoneself/IdeaProjects/force-mongo-all/mongo-java-driver-r3.5.0/bson/src/main/org/bson/BsonBinaryReader.java">
+</file>
+<file name="/Users/forceoneself/IdeaProjects/force-mongo-all/mongo-java-driver-r3.5.0/bson/src/main/org/bson/BsonBinarySubType.java">
+</file>
+<file name="/Users/forceoneself/IdeaProjects/force-mongo-all/mongo-java-driver-r3.5.0/bson/src/main/org/bson/BsonBinaryWriter.java">
+</file>
+<file name="/Users/forceoneself/IdeaProjects/force-mongo-all/mongo-java-driver-r3.5.0/bson/src/main/org/bson/BsonBinaryWriterSettings.java">
+</file>
+<file name="/Users/forceoneself/IdeaProjects/force-mongo-all/mongo-java-driver-r3.5.0/bson/src/main/org/bson/BsonBoolean.java">
+</file>
+<file name="/Users/forceoneself/IdeaProjects/force-mongo-all/mongo-java-driver-r3.5.0/bson/src/main/org/bson/BsonContextType.java">
+</file>
+<file name="/Users/forceoneself/IdeaProjects/force-mongo-all/mongo-java-driver-r3.5.0/bson/src/main/org/bson/BsonDateTime.java">
+</file>
+<file name="/Users/forceoneself/IdeaProjects/force-mongo-all/mongo-java-driver-r3.5.0/bson/src/main/org/bson/BsonDbPointer.java">
+</file>
+<file name="/Users/forceoneself/IdeaProjects/force-mongo-all/mongo-java-driver-r3.5.0/bson/src/main/org/bson/BsonDecimal128.java">
+</file>
+<file name="/Users/forceoneself/IdeaProjects/force-mongo-all/mongo-java-driver-r3.5.0/bson/src/main/org/bson/BsonDocument.java">
+</file>
+<file name="/Users/forceoneself/IdeaProjects/force-mongo-all/mongo-java-driver-r3.5.0/bson/src/main/org/bson/BsonDocumentReader.java">
+</file>
+<file name="/Users/forceoneself/IdeaProjects/force-mongo-all/mongo-java-driver-r3.5.0/bson/src/main/org/bson/BsonDocumentWrapper.java">
+</file>
+<file name="/Users/forceoneself/IdeaProjects/force-mongo-all/mongo-java-driver-r3.5.0/bson/src/main/org/bson/BsonDocumentWriter.java">
+</file>
+<file name="/Users/forceoneself/IdeaProjects/force-mongo-all/mongo-java-driver-r3.5.0/bson/src/main/org/bson/BsonDouble.java">
+</file>
+<file name="/Users/forceoneself/IdeaProjects/force-mongo-all/mongo-java-driver-r3.5.0/bson/src/main/org/bson/BsonElement.java">
+</file>
+<file name="/Users/forceoneself/IdeaProjects/force-mongo-all/mongo-java-driver-r3.5.0/bson/src/main/org/bson/BsonInt32.java">
+</file>
+<file name="/Users/forceoneself/IdeaProjects/force-mongo-all/mongo-java-driver-r3.5.0/bson/src/main/org/bson/BsonInt64.java">
+</file>
+<file name="/Users/forceoneself/IdeaProjects/force-mongo-all/mongo-java-driver-r3.5.0/bson/src/main/org/bson/BsonInvalidOperationException.java">
+</file>
+<file name="/Users/forceoneself/IdeaProjects/force-mongo-all/mongo-java-driver-r3.5.0/bson/src/main/org/bson/BsonJavaScript.java">
+</file>
+<file name="/Users/forceoneself/IdeaProjects/force-mongo-all/mongo-java-driver-r3.5.0/bson/src/main/org/bson/BsonJavaScriptWithScope.java">
+</file>
+<file name="/Users/forceoneself/IdeaProjects/force-mongo-all/mongo-java-driver-r3.5.0/bson/src/main/org/bson/BsonMaxKey.java">
+</file>
+<file name="/Users/forceoneself/IdeaProjects/force-mongo-all/mongo-java-driver-r3.5.0/bson/src/main/org/bson/BsonMinKey.java">
+</file>
+<file name="/Users/forceoneself/IdeaProjects/force-mongo-all/mongo-java-driver-r3.5.0/bson/src/main/org/bson/BsonNull.java">
+</file>
+<file name="/Users/forceoneself/IdeaProjects/force-mongo-all/mongo-java-driver-r3.5.0/bson/src/main/org/bson/BsonNumber.java">
+</file>
+<file name="/Users/forceoneself/IdeaProjects/force-mongo-all/mongo-java-driver-r3.5.0/bson/src/main/org/bson/BsonObjectId.java">
+</file>
+<file name="/Users/forceoneself/IdeaProjects/force-mongo-all/mongo-java-driver-r3.5.0/bson/src/main/org/bson/BsonReader.java">
+</file>
+<file name="/Users/forceoneself/IdeaProjects/force-mongo-all/mongo-java-driver-r3.5.0/bson/src/main/org/bson/BsonReaderMark.java">
+</file>
+<file name="/Users/forceoneself/IdeaProjects/force-mongo-all/mongo-java-driver-r3.5.0/bson/src/main/org/bson/BsonRegularExpression.java">
+</file>
+<file name="/Users/forceoneself/IdeaProjects/force-mongo-all/mongo-java-driver-r3.5.0/bson/src/main/org/bson/BsonSerializationException.java">
+</file>
+<file name="/Users/forceoneself/IdeaProjects/force-mongo-all/mongo-java-driver-r3.5.0/bson/src/main/org/bson/BsonString.java">
+</file>
+<file name="/Users/forceoneself/IdeaProjects/force-mongo-all/mongo-java-driver-r3.5.0/bson/src/main/org/bson/BsonSymbol.java">
+</file>
+<file name="/Users/forceoneself/IdeaProjects/force-mongo-all/mongo-java-driver-r3.5.0/bson/src/main/org/bson/BsonTimestamp.java">
+</file>
+<file name="/Users/forceoneself/IdeaProjects/force-mongo-all/mongo-java-driver-r3.5.0/bson/src/main/org/bson/BsonType.java">
+</file>
+<file name="/Users/forceoneself/IdeaProjects/force-mongo-all/mongo-java-driver-r3.5.0/bson/src/main/org/bson/BsonUndefined.java">
+</file>
+<file name="/Users/forceoneself/IdeaProjects/force-mongo-all/mongo-java-driver-r3.5.0/bson/src/main/org/bson/BsonValue.java">
+</file>
+<file name="/Users/forceoneself/IdeaProjects/force-mongo-all/mongo-java-driver-r3.5.0/bson/src/main/org/bson/BsonWriter.java">
+</file>
+<file name="/Users/forceoneself/IdeaProjects/force-mongo-all/mongo-java-driver-r3.5.0/bson/src/main/org/bson/BsonWriterSettings.java">
+</file>
+<file name="/Users/forceoneself/IdeaProjects/force-mongo-all/mongo-java-driver-r3.5.0/bson/src/main/org/bson/ByteBuf.java">
+</file>
+<file name="/Users/forceoneself/IdeaProjects/force-mongo-all/mongo-java-driver-r3.5.0/bson/src/main/org/bson/ByteBufNIO.java">
+</file>
+<file name="/Users/forceoneself/IdeaProjects/force-mongo-all/mongo-java-driver-r3.5.0/bson/src/main/org/bson/Document.java">
+</file>
+<file name="/Users/forceoneself/IdeaProjects/force-mongo-all/mongo-java-driver-r3.5.0/bson/src/main/org/bson/FieldNameValidator.java">
+</file>
+<file name="/Users/forceoneself/IdeaProjects/force-mongo-all/mongo-java-driver-r3.5.0/bson/src/main/org/bson/NoOpFieldNameValidator.java">
+</file>
+<file name="/Users/forceoneself/IdeaProjects/force-mongo-all/mongo-java-driver-r3.5.0/bson/src/main/org/bson/RawBsonDocument.java">
+</file>
+<file name="/Users/forceoneself/IdeaProjects/force-mongo-all/mongo-java-driver-r3.5.0/bson/src/main/org/bson/StringUtils.java">
+</file>
+<file name="/Users/forceoneself/IdeaProjects/force-mongo-all/mongo-java-driver-r3.5.0/bson/src/main/org/bson/Transformer.java">
+</file>
+<file name="/Users/forceoneself/IdeaProjects/force-mongo-all/mongo-java-driver-r3.5.0/bson/src/main/org/bson/UuidRepresentation.java">
+</file>
+<file name="/Users/forceoneself/IdeaProjects/force-mongo-all/mongo-java-driver-r3.5.0/bson/src/main/org/bson/assertions/Assertions.java">
+</file>
+<file name="/Users/forceoneself/IdeaProjects/force-mongo-all/mongo-java-driver-r3.5.0/bson/src/main/org/bson/assertions/package-info.java">
+</file>
+<file name="/Users/forceoneself/IdeaProjects/force-mongo-all/mongo-java-driver-r3.5.0/bson/src/main/org/bson/codecs/AtomicBooleanCodec.java">
+</file>
+<file name="/Users/forceoneself/IdeaProjects/force-mongo-all/mongo-java-driver-r3.5.0/bson/src/main/org/bson/codecs/AtomicIntegerCodec.java">
+</file>
+<file name="/Users/forceoneself/IdeaProjects/force-mongo-all/mongo-java-driver-r3.5.0/bson/src/main/org/bson/codecs/AtomicLongCodec.java">
+</file>
+<file name="/Users/forceoneself/IdeaProjects/force-mongo-all/mongo-java-driver-r3.5.0/bson/src/main/org/bson/codecs/BigDecimalCodec.java">
+</file>
+<file name="/Users/forceoneself/IdeaProjects/force-mongo-all/mongo-java-driver-r3.5.0/bson/src/main/org/bson/codecs/BinaryCodec.java">
+</file>
+<file name="/Users/forceoneself/IdeaProjects/force-mongo-all/mongo-java-driver-r3.5.0/bson/src/main/org/bson/codecs/BooleanCodec.java">
+</file>
+<file name="/Users/forceoneself/IdeaProjects/force-mongo-all/mongo-java-driver-r3.5.0/bson/src/main/org/bson/codecs/BsonArrayCodec.java">
+</file>
+<file name="/Users/forceoneself/IdeaProjects/force-mongo-all/mongo-java-driver-r3.5.0/bson/src/main/org/bson/codecs/BsonBinaryCodec.java">
+</file>
+<file name="/Users/forceoneself/IdeaProjects/force-mongo-all/mongo-java-driver-r3.5.0/bson/src/main/org/bson/codecs/BsonBooleanCodec.java">
+</file>
+<file name="/Users/forceoneself/IdeaProjects/force-mongo-all/mongo-java-driver-r3.5.0/bson/src/main/org/bson/codecs/BsonDBPointerCodec.java">
+</file>
+<file name="/Users/forceoneself/IdeaProjects/force-mongo-all/mongo-java-driver-r3.5.0/bson/src/main/org/bson/codecs/BsonDateTimeCodec.java">
+</file>
+<file name="/Users/forceoneself/IdeaProjects/force-mongo-all/mongo-java-driver-r3.5.0/bson/src/main/org/bson/codecs/BsonDecimal128Codec.java">
+</file>
+<file name="/Users/forceoneself/IdeaProjects/force-mongo-all/mongo-java-driver-r3.5.0/bson/src/main/org/bson/codecs/BsonDocumentCodec.java">
+</file>
+<file name="/Users/forceoneself/IdeaProjects/force-mongo-all/mongo-java-driver-r3.5.0/bson/src/main/org/bson/codecs/BsonDocumentWrapperCodec.java">
+</file>
+<file name="/Users/forceoneself/IdeaProjects/force-mongo-all/mongo-java-driver-r3.5.0/bson/src/main/org/bson/codecs/BsonDoubleCodec.java">
+</file>
+<file name="/Users/forceoneself/IdeaProjects/force-mongo-all/mongo-java-driver-r3.5.0/bson/src/main/org/bson/codecs/BsonInt32Codec.java">
+</file>
+<file name="/Users/forceoneself/IdeaProjects/force-mongo-all/mongo-java-driver-r3.5.0/bson/src/main/org/bson/codecs/BsonInt64Codec.java">
+</file>
+<file name="/Users/forceoneself/IdeaProjects/force-mongo-all/mongo-java-driver-r3.5.0/bson/src/main/org/bson/codecs/BsonJavaScriptCodec.java">
+</file>
+<file name="/Users/forceoneself/IdeaProjects/force-mongo-all/mongo-java-driver-r3.5.0/bson/src/main/org/bson/codecs/BsonJavaScriptWithScopeCodec.java">
+</file>
+<file name="/Users/forceoneself/IdeaProjects/force-mongo-all/mongo-java-driver-r3.5.0/bson/src/main/org/bson/codecs/BsonMaxKeyCodec.java">
+</file>
+<file name="/Users/forceoneself/IdeaProjects/force-mongo-all/mongo-java-driver-r3.5.0/bson/src/main/org/bson/codecs/BsonMinKeyCodec.java">
+</file>
+<file name="/Users/forceoneself/IdeaProjects/force-mongo-all/mongo-java-driver-r3.5.0/bson/src/main/org/bson/codecs/BsonNullCodec.java">
+</file>
+<file name="/Users/forceoneself/IdeaProjects/force-mongo-all/mongo-java-driver-r3.5.0/bson/src/main/org/bson/codecs/BsonObjectIdCodec.java">
+</file>
+<file name="/Users/forceoneself/IdeaProjects/force-mongo-all/mongo-java-driver-r3.5.0/bson/src/main/org/bson/codecs/BsonRegularExpressionCodec.java">
+</file>
+<file name="/Users/forceoneself/IdeaProjects/force-mongo-all/mongo-java-driver-r3.5.0/bson/src/main/org/bson/codecs/BsonStringCodec.java">
+</file>
+<file name="/Users/forceoneself/IdeaProjects/force-mongo-all/mongo-java-driver-r3.5.0/bson/src/main/org/bson/codecs/BsonSymbolCodec.java">
+</file>
+<file name="/Users/forceoneself/IdeaProjects/force-mongo-all/mongo-java-driver-r3.5.0/bson/src/main/org/bson/codecs/BsonTimestampCodec.java">
+</file>
+<file name="/Users/forceoneself/IdeaProjects/force-mongo-all/mongo-java-driver-r3.5.0/bson/src/main/org/bson/codecs/BsonTypeClassMap.java">
+</file>
+<file name="/Users/forceoneself/IdeaProjects/force-mongo-all/mongo-java-driver-r3.5.0/bson/src/main/org/bson/codecs/BsonTypeCodecMap.java">
+</file>
+<file name="/Users/forceoneself/IdeaProjects/force-mongo-all/mongo-java-driver-r3.5.0/bson/src/main/org/bson/codecs/BsonUndefinedCodec.java">
+</file>
+<file name="/Users/forceoneself/IdeaProjects/force-mongo-all/mongo-java-driver-r3.5.0/bson/src/main/org/bson/codecs/BsonValueCodec.java">
+</file>
+<file name="/Users/forceoneself/IdeaProjects/force-mongo-all/mongo-java-driver-r3.5.0/bson/src/main/org/bson/codecs/BsonValueCodecProvider.java">
+</file>
+<file name="/Users/forceoneself/IdeaProjects/force-mongo-all/mongo-java-driver-r3.5.0/bson/src/main/org/bson/codecs/ByteArrayCodec.java">
+</file>
+<file name="/Users/forceoneself/IdeaProjects/force-mongo-all/mongo-java-driver-r3.5.0/bson/src/main/org/bson/codecs/ByteCodec.java">
+</file>
+<file name="/Users/forceoneself/IdeaProjects/force-mongo-all/mongo-java-driver-r3.5.0/bson/src/main/org/bson/codecs/CharacterCodec.java">
+</file>
+<file name="/Users/forceoneself/IdeaProjects/force-mongo-all/mongo-java-driver-r3.5.0/bson/src/main/org/bson/codecs/CodeCodec.java">
+</file>
+<file name="/Users/forceoneself/IdeaProjects/force-mongo-all/mongo-java-driver-r3.5.0/bson/src/main/org/bson/codecs/CodeWithScopeCodec.java">
+</file>
+<file name="/Users/forceoneself/IdeaProjects/force-mongo-all/mongo-java-driver-r3.5.0/bson/src/main/org/bson/codecs/Codec.java">
+</file>
+<file name="/Users/forceoneself/IdeaProjects/force-mongo-all/mongo-java-driver-r3.5.0/bson/src/main/org/bson/codecs/CollectibleCodec.java">
+</file>
+<file name="/Users/forceoneself/IdeaProjects/force-mongo-all/mongo-java-driver-r3.5.0/bson/src/main/org/bson/codecs/DateCodec.java">
+</file>
+<file name="/Users/forceoneself/IdeaProjects/force-mongo-all/mongo-java-driver-r3.5.0/bson/src/main/org/bson/codecs/Decimal128Codec.java">
+</file>
+<file name="/Users/forceoneself/IdeaProjects/force-mongo-all/mongo-java-driver-r3.5.0/bson/src/main/org/bson/codecs/Decoder.java">
+</file>
+<file name="/Users/forceoneself/IdeaProjects/force-mongo-all/mongo-java-driver-r3.5.0/bson/src/main/org/bson/codecs/DecoderContext.java">
+</file>
+<file name="/Users/forceoneself/IdeaProjects/force-mongo-all/mongo-java-driver-r3.5.0/bson/src/main/org/bson/codecs/DocumentCodec.java">
+</file>
+<file name="/Users/forceoneself/IdeaProjects/force-mongo-all/mongo-java-driver-r3.5.0/bson/src/main/org/bson/codecs/DocumentCodecProvider.java">
+</file>
+<file name="/Users/forceoneself/IdeaProjects/force-mongo-all/mongo-java-driver-r3.5.0/bson/src/main/org/bson/codecs/DoubleCodec.java">
+</file>
+<file name="/Users/forceoneself/IdeaProjects/force-mongo-all/mongo-java-driver-r3.5.0/bson/src/main/org/bson/codecs/Encoder.java">
+</file>
+<file name="/Users/forceoneself/IdeaProjects/force-mongo-all/mongo-java-driver-r3.5.0/bson/src/main/org/bson/codecs/EncoderContext.java">
+</file>
+<file name="/Users/forceoneself/IdeaProjects/force-mongo-all/mongo-java-driver-r3.5.0/bson/src/main/org/bson/codecs/FloatCodec.java">
+</file>
+<file name="/Users/forceoneself/IdeaProjects/force-mongo-all/mongo-java-driver-r3.5.0/bson/src/main/org/bson/codecs/IdGenerator.java">
+</file>
+<file name="/Users/forceoneself/IdeaProjects/force-mongo-all/mongo-java-driver-r3.5.0/bson/src/main/org/bson/codecs/IntegerCodec.java">
+</file>
+<file name="/Users/forceoneself/IdeaProjects/force-mongo-all/mongo-java-driver-r3.5.0/bson/src/main/org/bson/codecs/IterableCodec.java">
+</file>
+<file name="/Users/forceoneself/IdeaProjects/force-mongo-all/mongo-java-driver-r3.5.0/bson/src/main/org/bson/codecs/IterableCodecProvider.java">
+</file>
+<file name="/Users/forceoneself/IdeaProjects/force-mongo-all/mongo-java-driver-r3.5.0/bson/src/main/org/bson/codecs/LongCodec.java">
+</file>
+<file name="/Users/forceoneself/IdeaProjects/force-mongo-all/mongo-java-driver-r3.5.0/bson/src/main/org/bson/codecs/MapCodec.java">
+</file>
+<file name="/Users/forceoneself/IdeaProjects/force-mongo-all/mongo-java-driver-r3.5.0/bson/src/main/org/bson/codecs/MapCodecProvider.java">
+</file>
+<file name="/Users/forceoneself/IdeaProjects/force-mongo-all/mongo-java-driver-r3.5.0/bson/src/main/org/bson/codecs/MaxKeyCodec.java">
+</file>
+<file name="/Users/forceoneself/IdeaProjects/force-mongo-all/mongo-java-driver-r3.5.0/bson/src/main/org/bson/codecs/MinKeyCodec.java">
+</file>
+<file name="/Users/forceoneself/IdeaProjects/force-mongo-all/mongo-java-driver-r3.5.0/bson/src/main/org/bson/codecs/NumberCodecHelper.java">
+</file>
+<file name="/Users/forceoneself/IdeaProjects/force-mongo-all/mongo-java-driver-r3.5.0/bson/src/main/org/bson/codecs/ObjectIdCodec.java">
+</file>
+<file name="/Users/forceoneself/IdeaProjects/force-mongo-all/mongo-java-driver-r3.5.0/bson/src/main/org/bson/codecs/ObjectIdGenerator.java">
+</file>
+<file name="/Users/forceoneself/IdeaProjects/force-mongo-all/mongo-java-driver-r3.5.0/bson/src/main/org/bson/codecs/PatternCodec.java">
+</file>
+<file name="/Users/forceoneself/IdeaProjects/force-mongo-all/mongo-java-driver-r3.5.0/bson/src/main/org/bson/codecs/RawBsonDocumentCodec.java">
+</file>
+<file name="/Users/forceoneself/IdeaProjects/force-mongo-all/mongo-java-driver-r3.5.0/bson/src/main/org/bson/codecs/ShortCodec.java">
+</file>
+<file name="/Users/forceoneself/IdeaProjects/force-mongo-all/mongo-java-driver-r3.5.0/bson/src/main/org/bson/codecs/StringCodec.java">
+</file>
+<file name="/Users/forceoneself/IdeaProjects/force-mongo-all/mongo-java-driver-r3.5.0/bson/src/main/org/bson/codecs/SymbolCodec.java">
+</file>
+<file name="/Users/forceoneself/IdeaProjects/force-mongo-all/mongo-java-driver-r3.5.0/bson/src/main/org/bson/codecs/UuidCodec.java">
+</file>
+<file name="/Users/forceoneself/IdeaProjects/force-mongo-all/mongo-java-driver-r3.5.0/bson/src/main/org/bson/codecs/UuidCodecHelper.java">
+</file>
+<file name="/Users/forceoneself/IdeaProjects/force-mongo-all/mongo-java-driver-r3.5.0/bson/src/main/org/bson/codecs/UuidCodecProvider.java">
+</file>
+<file name="/Users/forceoneself/IdeaProjects/force-mongo-all/mongo-java-driver-r3.5.0/bson/src/main/org/bson/codecs/ValueCodecProvider.java">
+</file>
+<file name="/Users/forceoneself/IdeaProjects/force-mongo-all/mongo-java-driver-r3.5.0/bson/src/main/org/bson/codecs/configuration/ChildCodecRegistry.java">
+</file>
+<file name="/Users/forceoneself/IdeaProjects/force-mongo-all/mongo-java-driver-r3.5.0/bson/src/main/org/bson/codecs/configuration/CodecCache.java">
+</file>
+<file name="/Users/forceoneself/IdeaProjects/force-mongo-all/mongo-java-driver-r3.5.0/bson/src/main/org/bson/codecs/configuration/CodecConfigurationException.java">
+</file>
+<file name="/Users/forceoneself/IdeaProjects/force-mongo-all/mongo-java-driver-r3.5.0/bson/src/main/org/bson/codecs/configuration/CodecProvider.java">
+</file>
+<file name="/Users/forceoneself/IdeaProjects/force-mongo-all/mongo-java-driver-r3.5.0/bson/src/main/org/bson/codecs/configuration/CodecRegistries.java">
+</file>
+<file name="/Users/forceoneself/IdeaProjects/force-mongo-all/mongo-java-driver-r3.5.0/bson/src/main/org/bson/codecs/configuration/CodecRegistry.java">
+</file>
+<file name="/Users/forceoneself/IdeaProjects/force-mongo-all/mongo-java-driver-r3.5.0/bson/src/main/org/bson/codecs/configuration/LazyCodec.java">
+</file>
+<file name="/Users/forceoneself/IdeaProjects/force-mongo-all/mongo-java-driver-r3.5.0/bson/src/main/org/bson/codecs/configuration/MapOfCodecsProvider.java">
+</file>
+<file name="/Users/forceoneself/IdeaProjects/force-mongo-all/mongo-java-driver-r3.5.0/bson/src/main/org/bson/codecs/configuration/Optional.java">
+</file>
+<file name="/Users/forceoneself/IdeaProjects/force-mongo-all/mongo-java-driver-r3.5.0/bson/src/main/org/bson/codecs/configuration/ProvidersCodecRegistry.java">
+</file>
+<file name="/Users/forceoneself/IdeaProjects/force-mongo-all/mongo-java-driver-r3.5.0/bson/src/main/org/bson/codecs/configuration/package-info.java">
+</file>
+<file name="/Users/forceoneself/IdeaProjects/force-mongo-all/mongo-java-driver-r3.5.0/bson/src/main/org/bson/codecs/package-info.java">
+</file>
+<file name="/Users/forceoneself/IdeaProjects/force-mongo-all/mongo-java-driver-r3.5.0/bson/src/main/org/bson/codecs/pojo/AutomaticPojoCodec.java">
+</file>
+<file name="/Users/forceoneself/IdeaProjects/force-mongo-all/mongo-java-driver-r3.5.0/bson/src/main/org/bson/codecs/pojo/ClassModel.java">
+</file>
+<file name="/Users/forceoneself/IdeaProjects/force-mongo-all/mongo-java-driver-r3.5.0/bson/src/main/org/bson/codecs/pojo/ClassModelBuilder.java">
+</file>
+<file name="/Users/forceoneself/IdeaProjects/force-mongo-all/mongo-java-driver-r3.5.0/bson/src/main/org/bson/codecs/pojo/CollectionCodec.java">
+</file>
+<file name="/Users/forceoneself/IdeaProjects/force-mongo-all/mongo-java-driver-r3.5.0/bson/src/main/org/bson/codecs/pojo/Convention.java">
+</file>
+<file name="/Users/forceoneself/IdeaProjects/force-mongo-all/mongo-java-driver-r3.5.0/bson/src/main/org/bson/codecs/pojo/ConventionAnnotationImpl.java">
+</file>
+<file name="/Users/forceoneself/IdeaProjects/force-mongo-all/mongo-java-driver-r3.5.0/bson/src/main/org/bson/codecs/pojo/ConventionDefaultsImpl.java">
+</file>
+<file name="/Users/forceoneself/IdeaProjects/force-mongo-all/mongo-java-driver-r3.5.0/bson/src/main/org/bson/codecs/pojo/Conventions.java">
+</file>
+<file name="/Users/forceoneself/IdeaProjects/force-mongo-all/mongo-java-driver-r3.5.0/bson/src/main/org/bson/codecs/pojo/CreatorExecutable.java">
+</file>
+<file name="/Users/forceoneself/IdeaProjects/force-mongo-all/mongo-java-driver-r3.5.0/bson/src/main/org/bson/codecs/pojo/DiscriminatorLookup.java">
+</file>
+<file name="/Users/forceoneself/IdeaProjects/force-mongo-all/mongo-java-driver-r3.5.0/bson/src/main/org/bson/codecs/pojo/EnumCodec.java">
+</file>
+<file name="/Users/forceoneself/IdeaProjects/force-mongo-all/mongo-java-driver-r3.5.0/bson/src/main/org/bson/codecs/pojo/InstanceCreator.java">
+</file>
+<file name="/Users/forceoneself/IdeaProjects/force-mongo-all/mongo-java-driver-r3.5.0/bson/src/main/org/bson/codecs/pojo/InstanceCreatorFactory.java">
+</file>
+<file name="/Users/forceoneself/IdeaProjects/force-mongo-all/mongo-java-driver-r3.5.0/bson/src/main/org/bson/codecs/pojo/InstanceCreatorFactoryImpl.java">
+</file>
+<file name="/Users/forceoneself/IdeaProjects/force-mongo-all/mongo-java-driver-r3.5.0/bson/src/main/org/bson/codecs/pojo/InstanceCreatorImpl.java">
+</file>
+<file name="/Users/forceoneself/IdeaProjects/force-mongo-all/mongo-java-driver-r3.5.0/bson/src/main/org/bson/codecs/pojo/LazyPojoCodec.java">
+</file>
+<file name="/Users/forceoneself/IdeaProjects/force-mongo-all/mongo-java-driver-r3.5.0/bson/src/main/org/bson/codecs/pojo/MapCodec.java">
+</file>
+<file name="/Users/forceoneself/IdeaProjects/force-mongo-all/mongo-java-driver-r3.5.0/bson/src/main/org/bson/codecs/pojo/PojoBuilderHelper.java">
+</file>
+<file name="/Users/forceoneself/IdeaProjects/force-mongo-all/mongo-java-driver-r3.5.0/bson/src/main/org/bson/codecs/pojo/PojoCodec.java">
+</file>
+<file name="/Users/forceoneself/IdeaProjects/force-mongo-all/mongo-java-driver-r3.5.0/bson/src/main/org/bson/codecs/pojo/PojoCodecImpl.java">
+</file>
+<file name="/Users/forceoneself/IdeaProjects/force-mongo-all/mongo-java-driver-r3.5.0/bson/src/main/org/bson/codecs/pojo/PojoCodecProvider.java">
+</file>
+<file name="/Users/forceoneself/IdeaProjects/force-mongo-all/mongo-java-driver-r3.5.0/bson/src/main/org/bson/codecs/pojo/PropertyAccessor.java">
+</file>
+<file name="/Users/forceoneself/IdeaProjects/force-mongo-all/mongo-java-driver-r3.5.0/bson/src/main/org/bson/codecs/pojo/PropertyAccessorImpl.java">
+</file>
+<file name="/Users/forceoneself/IdeaProjects/force-mongo-all/mongo-java-driver-r3.5.0/bson/src/main/org/bson/codecs/pojo/PropertyMetadata.java">
+</file>
+<file name="/Users/forceoneself/IdeaProjects/force-mongo-all/mongo-java-driver-r3.5.0/bson/src/main/org/bson/codecs/pojo/PropertyModel.java">
+</file>
+<file name="/Users/forceoneself/IdeaProjects/force-mongo-all/mongo-java-driver-r3.5.0/bson/src/main/org/bson/codecs/pojo/PropertyModelBuilder.java">
+</file>
+<file name="/Users/forceoneself/IdeaProjects/force-mongo-all/mongo-java-driver-r3.5.0/bson/src/main/org/bson/codecs/pojo/PropertyModelSerializationImpl.java">
+</file>
+<file name="/Users/forceoneself/IdeaProjects/force-mongo-all/mongo-java-driver-r3.5.0/bson/src/main/org/bson/codecs/pojo/PropertySerialization.java">
+</file>
+<file name="/Users/forceoneself/IdeaProjects/force-mongo-all/mongo-java-driver-r3.5.0/bson/src/main/org/bson/codecs/pojo/TypeData.java">
+</file>
+<file name="/Users/forceoneself/IdeaProjects/force-mongo-all/mongo-java-driver-r3.5.0/bson/src/main/org/bson/codecs/pojo/TypeParameterMap.java">
+</file>
+<file name="/Users/forceoneself/IdeaProjects/force-mongo-all/mongo-java-driver-r3.5.0/bson/src/main/org/bson/codecs/pojo/annotations/BsonCreator.java">
+</file>
+<file name="/Users/forceoneself/IdeaProjects/force-mongo-all/mongo-java-driver-r3.5.0/bson/src/main/org/bson/codecs/pojo/annotations/BsonDiscriminator.java">
+</file>
+<file name="/Users/forceoneself/IdeaProjects/force-mongo-all/mongo-java-driver-r3.5.0/bson/src/main/org/bson/codecs/pojo/annotations/BsonId.java">
+</file>
+<file name="/Users/forceoneself/IdeaProjects/force-mongo-all/mongo-java-driver-r3.5.0/bson/src/main/org/bson/codecs/pojo/annotations/BsonIgnore.java">
+</file>
+<file name="/Users/forceoneself/IdeaProjects/force-mongo-all/mongo-java-driver-r3.5.0/bson/src/main/org/bson/codecs/pojo/annotations/BsonProperty.java">
+</file>
+<file name="/Users/forceoneself/IdeaProjects/force-mongo-all/mongo-java-driver-r3.5.0/bson/src/main/org/bson/codecs/pojo/annotations/package-info.java">
+</file>
+<file name="/Users/forceoneself/IdeaProjects/force-mongo-all/mongo-java-driver-r3.5.0/bson/src/main/org/bson/codecs/pojo/package-info.java">
+</file>
+<file name="/Users/forceoneself/IdeaProjects/force-mongo-all/mongo-java-driver-r3.5.0/bson/src/main/org/bson/conversions/Bson.java">
+</file>
+<file name="/Users/forceoneself/IdeaProjects/force-mongo-all/mongo-java-driver-r3.5.0/bson/src/main/org/bson/conversions/package-info.java">
+</file>
+<file name="/Users/forceoneself/IdeaProjects/force-mongo-all/mongo-java-driver-r3.5.0/bson/src/main/org/bson/diagnostics/JULLogger.java">
+</file>
+<file name="/Users/forceoneself/IdeaProjects/force-mongo-all/mongo-java-driver-r3.5.0/bson/src/main/org/bson/diagnostics/Logger.java">
+</file>
+<file name="/Users/forceoneself/IdeaProjects/force-mongo-all/mongo-java-driver-r3.5.0/bson/src/main/org/bson/diagnostics/Loggers.java">
+</file>
+<file name="/Users/forceoneself/IdeaProjects/force-mongo-all/mongo-java-driver-r3.5.0/bson/src/main/org/bson/diagnostics/SLF4JLogger.java">
+</file>
+<file name="/Users/forceoneself/IdeaProjects/force-mongo-all/mongo-java-driver-r3.5.0/bson/src/main/org/bson/diagnostics/package-info.java">
+</file>
+<file name="/Users/forceoneself/IdeaProjects/force-mongo-all/mongo-java-driver-r3.5.0/bson/src/main/org/bson/internal/Base64.java">
+</file>
+<file name="/Users/forceoneself/IdeaProjects/force-mongo-all/mongo-java-driver-r3.5.0/bson/src/main/org/bson/internal/UnsignedLongs.java">
+</file>
+<file name="/Users/forceoneself/IdeaProjects/force-mongo-all/mongo-java-driver-r3.5.0/bson/src/main/org/bson/io/BasicOutputBuffer.java">
+</file>
+<file name="/Users/forceoneself/IdeaProjects/force-mongo-all/mongo-java-driver-r3.5.0/bson/src/main/org/bson/io/BsonInput.java">
+</file>
+<file name="/Users/forceoneself/IdeaProjects/force-mongo-all/mongo-java-driver-r3.5.0/bson/src/main/org/bson/io/BsonOutput.java">
+</file>
+<file name="/Users/forceoneself/IdeaProjects/force-mongo-all/mongo-java-driver-r3.5.0/bson/src/main/org/bson/io/ByteBufferBsonInput.java">
+</file>
+<file name="/Users/forceoneself/IdeaProjects/force-mongo-all/mongo-java-driver-r3.5.0/bson/src/main/org/bson/io/OutputBuffer.java">
+</file>
+<file name="/Users/forceoneself/IdeaProjects/force-mongo-all/mongo-java-driver-r3.5.0/bson/src/main/org/bson/io/package-info.java">
+</file>
+<file name="/Users/forceoneself/IdeaProjects/force-mongo-all/mongo-java-driver-r3.5.0/bson/src/main/org/bson/json/Converter.java">
+</file>
+<file name="/Users/forceoneself/IdeaProjects/force-mongo-all/mongo-java-driver-r3.5.0/bson/src/main/org/bson/json/DateTimeFormatter.java">
+</file>
+<file name="/Users/forceoneself/IdeaProjects/force-mongo-all/mongo-java-driver-r3.5.0/bson/src/main/org/bson/json/ExtendedJsonBinaryConverter.java">
+</file>
+<file name="/Users/forceoneself/IdeaProjects/force-mongo-all/mongo-java-driver-r3.5.0/bson/src/main/org/bson/json/ExtendedJsonDateTimeConverter.java">
+</file>
+<file name="/Users/forceoneself/IdeaProjects/force-mongo-all/mongo-java-driver-r3.5.0/bson/src/main/org/bson/json/ExtendedJsonDecimal128Converter.java">
+</file>
+<file name="/Users/forceoneself/IdeaProjects/force-mongo-all/mongo-java-driver-r3.5.0/bson/src/main/org/bson/json/ExtendedJsonDoubleConverter.java">
+</file>
+<file name="/Users/forceoneself/IdeaProjects/force-mongo-all/mongo-java-driver-r3.5.0/bson/src/main/org/bson/json/ExtendedJsonInt32Converter.java">
+</file>
+<file name="/Users/forceoneself/IdeaProjects/force-mongo-all/mongo-java-driver-r3.5.0/bson/src/main/org/bson/json/ExtendedJsonInt64Converter.java">
+</file>
+<file name="/Users/forceoneself/IdeaProjects/force-mongo-all/mongo-java-driver-r3.5.0/bson/src/main/org/bson/json/ExtendedJsonMaxKeyConverter.java">
+</file>
+<file name="/Users/forceoneself/IdeaProjects/force-mongo-all/mongo-java-driver-r3.5.0/bson/src/main/org/bson/json/ExtendedJsonMinKeyConverter.java">
+</file>
+<file name="/Users/forceoneself/IdeaProjects/force-mongo-all/mongo-java-driver-r3.5.0/bson/src/main/org/bson/json/ExtendedJsonObjectIdConverter.java">
+</file>
+<file name="/Users/forceoneself/IdeaProjects/force-mongo-all/mongo-java-driver-r3.5.0/bson/src/main/org/bson/json/ExtendedJsonRegularExpressionConverter.java">
+</file>
+<file name="/Users/forceoneself/IdeaProjects/force-mongo-all/mongo-java-driver-r3.5.0/bson/src/main/org/bson/json/ExtendedJsonTimestampConverter.java">
+</file>
+<file name="/Users/forceoneself/IdeaProjects/force-mongo-all/mongo-java-driver-r3.5.0/bson/src/main/org/bson/json/ExtendedJsonUndefinedConverter.java">
+</file>
+<file name="/Users/forceoneself/IdeaProjects/force-mongo-all/mongo-java-driver-r3.5.0/bson/src/main/org/bson/json/JsonBooleanConverter.java">
+</file>
+<file name="/Users/forceoneself/IdeaProjects/force-mongo-all/mongo-java-driver-r3.5.0/bson/src/main/org/bson/json/JsonBuffer.java">
+</file>
+<file name="/Users/forceoneself/IdeaProjects/force-mongo-all/mongo-java-driver-r3.5.0/bson/src/main/org/bson/json/JsonDoubleConverter.java">
+</file>
+<file name="/Users/forceoneself/IdeaProjects/force-mongo-all/mongo-java-driver-r3.5.0/bson/src/main/org/bson/json/JsonInt32Converter.java">
+</file>
+<file name="/Users/forceoneself/IdeaProjects/force-mongo-all/mongo-java-driver-r3.5.0/bson/src/main/org/bson/json/JsonJavaScriptConverter.java">
+</file>
+<file name="/Users/forceoneself/IdeaProjects/force-mongo-all/mongo-java-driver-r3.5.0/bson/src/main/org/bson/json/JsonMode.java">
+</file>
+<file name="/Users/forceoneself/IdeaProjects/force-mongo-all/mongo-java-driver-r3.5.0/bson/src/main/org/bson/json/JsonNullConverter.java">
+</file>
+<file name="/Users/forceoneself/IdeaProjects/force-mongo-all/mongo-java-driver-r3.5.0/bson/src/main/org/bson/json/JsonParseException.java">
+</file>
+<file name="/Users/forceoneself/IdeaProjects/force-mongo-all/mongo-java-driver-r3.5.0/bson/src/main/org/bson/json/JsonReader.java">
+</file>
+<file name="/Users/forceoneself/IdeaProjects/force-mongo-all/mongo-java-driver-r3.5.0/bson/src/main/org/bson/json/JsonScanner.java">
+</file>
+<file name="/Users/forceoneself/IdeaProjects/force-mongo-all/mongo-java-driver-r3.5.0/bson/src/main/org/bson/json/JsonStringConverter.java">
+</file>
+<file name="/Users/forceoneself/IdeaProjects/force-mongo-all/mongo-java-driver-r3.5.0/bson/src/main/org/bson/json/JsonSymbolConverter.java">
+</file>
+<file name="/Users/forceoneself/IdeaProjects/force-mongo-all/mongo-java-driver-r3.5.0/bson/src/main/org/bson/json/JsonToken.java">
+</file>
+<file name="/Users/forceoneself/IdeaProjects/force-mongo-all/mongo-java-driver-r3.5.0/bson/src/main/org/bson/json/JsonTokenType.java">
+</file>
+<file name="/Users/forceoneself/IdeaProjects/force-mongo-all/mongo-java-driver-r3.5.0/bson/src/main/org/bson/json/JsonWriter.java">
+</file>
+<file name="/Users/forceoneself/IdeaProjects/force-mongo-all/mongo-java-driver-r3.5.0/bson/src/main/org/bson/json/JsonWriterSettings.java">
+</file>
+<file name="/Users/forceoneself/IdeaProjects/force-mongo-all/mongo-java-driver-r3.5.0/bson/src/main/org/bson/json/LegacyExtendedJsonBinaryConverter.java">
+</file>
+<file name="/Users/forceoneself/IdeaProjects/force-mongo-all/mongo-java-driver-r3.5.0/bson/src/main/org/bson/json/LegacyExtendedJsonDateTimeConverter.java">
+</file>
+<file name="/Users/forceoneself/IdeaProjects/force-mongo-all/mongo-java-driver-r3.5.0/bson/src/main/org/bson/json/LegacyExtendedJsonRegularExpressionConverter.java">
+</file>
+<file name="/Users/forceoneself/IdeaProjects/force-mongo-all/mongo-java-driver-r3.5.0/bson/src/main/org/bson/json/RelaxedExtendedJsonDateTimeConverter.java">
+</file>
+<file name="/Users/forceoneself/IdeaProjects/force-mongo-all/mongo-java-driver-r3.5.0/bson/src/main/org/bson/json/RelaxedExtendedJsonDoubleConverter.java">
+</file>
+<file name="/Users/forceoneself/IdeaProjects/force-mongo-all/mongo-java-driver-r3.5.0/bson/src/main/org/bson/json/RelaxedExtendedJsonInt64Converter.java">
+</file>
+<file name="/Users/forceoneself/IdeaProjects/force-mongo-all/mongo-java-driver-r3.5.0/bson/src/main/org/bson/json/ShellBinaryConverter.java">
+</file>
+<file name="/Users/forceoneself/IdeaProjects/force-mongo-all/mongo-java-driver-r3.5.0/bson/src/main/org/bson/json/ShellDateTimeConverter.java">
+</file>
+<file name="/Users/forceoneself/IdeaProjects/force-mongo-all/mongo-java-driver-r3.5.0/bson/src/main/org/bson/json/ShellDecimal128Converter.java">
+</file>
+<file name="/Users/forceoneself/IdeaProjects/force-mongo-all/mongo-java-driver-r3.5.0/bson/src/main/org/bson/json/ShellInt64Converter.java">
+</file>
+<file name="/Users/forceoneself/IdeaProjects/force-mongo-all/mongo-java-driver-r3.5.0/bson/src/main/org/bson/json/ShellMaxKeyConverter.java">
+</file>
+<file name="/Users/forceoneself/IdeaProjects/force-mongo-all/mongo-java-driver-r3.5.0/bson/src/main/org/bson/json/ShellMinKeyConverter.java">
+</file>
+<file name="/Users/forceoneself/IdeaProjects/force-mongo-all/mongo-java-driver-r3.5.0/bson/src/main/org/bson/json/ShellObjectIdConverter.java">
+</file>
+<file name="/Users/forceoneself/IdeaProjects/force-mongo-all/mongo-java-driver-r3.5.0/bson/src/main/org/bson/json/ShellRegularExpressionConverter.java">
+</file>
+<file name="/Users/forceoneself/IdeaProjects/force-mongo-all/mongo-java-driver-r3.5.0/bson/src/main/org/bson/json/ShellTimestampConverter.java">
+</file>
+<file name="/Users/forceoneself/IdeaProjects/force-mongo-all/mongo-java-driver-r3.5.0/bson/src/main/org/bson/json/ShellUndefinedConverter.java">
+</file>
+<file name="/Users/forceoneself/IdeaProjects/force-mongo-all/mongo-java-driver-r3.5.0/bson/src/main/org/bson/json/StrictCharacterStreamJsonWriter.java">
+</file>
+<file name="/Users/forceoneself/IdeaProjects/force-mongo-all/mongo-java-driver-r3.5.0/bson/src/main/org/bson/json/StrictCharacterStreamJsonWriterSettings.java">
+</file>
+<file name="/Users/forceoneself/IdeaProjects/force-mongo-all/mongo-java-driver-r3.5.0/bson/src/main/org/bson/json/StrictJsonWriter.java">
+</file>
+<file name="/Users/forceoneself/IdeaProjects/force-mongo-all/mongo-java-driver-r3.5.0/bson/src/main/org/bson/json/package-info.java">
+</file>
+<file name="/Users/forceoneself/IdeaProjects/force-mongo-all/mongo-java-driver-r3.5.0/bson/src/main/org/bson/package-info.java">
+</file>
+<file name="/Users/forceoneself/IdeaProjects/force-mongo-all/mongo-java-driver-r3.5.0/bson/src/main/org/bson/types/Binary.java">
+</file>
+<file name="/Users/forceoneself/IdeaProjects/force-mongo-all/mongo-java-driver-r3.5.0/bson/src/main/org/bson/types/Code.java">
+</file>
+<file name="/Users/forceoneself/IdeaProjects/force-mongo-all/mongo-java-driver-r3.5.0/bson/src/main/org/bson/types/CodeWithScope.java">
+</file>
+<file name="/Users/forceoneself/IdeaProjects/force-mongo-all/mongo-java-driver-r3.5.0/bson/src/main/org/bson/types/Decimal128.java">
+</file>
+<file name="/Users/forceoneself/IdeaProjects/force-mongo-all/mongo-java-driver-r3.5.0/bson/src/main/org/bson/types/MaxKey.java">
+</file>
+<file name="/Users/forceoneself/IdeaProjects/force-mongo-all/mongo-java-driver-r3.5.0/bson/src/main/org/bson/types/MinKey.java">
+</file>
+<file name="/Users/forceoneself/IdeaProjects/force-mongo-all/mongo-java-driver-r3.5.0/bson/src/main/org/bson/types/ObjectId.java">
+</file>
+<file name="/Users/forceoneself/IdeaProjects/force-mongo-all/mongo-java-driver-r3.5.0/bson/src/main/org/bson/types/Symbol.java">
+</file>
+<file name="/Users/forceoneself/IdeaProjects/force-mongo-all/mongo-java-driver-r3.5.0/bson/src/main/org/bson/types/package-info.java">
+</file>
+</checkstyle>

@@ -1,0 +1,24 @@
+Manifest-Version: 1.0
+Export-Package: org.bson;version="3.5.0";uses:="org.bson.codecs,org.bs
+ on.codecs.configuration,org.bson.conversions,org.bson.io,org.bson.jso
+ n,org.bson.types",org.bson.assertions;version="3.5.0",org.bson.codecs
+ ;version="3.5.0";uses:="org.bson,org.bson.codecs.configuration,org.bs
+ on.types",org.bson.codecs.configuration;version="3.5.0";uses:="org.bs
+ on.codecs",org.bson.codecs.pojo;version="3.5.0";uses:="org.bson.codec
+ s,org.bson.codecs.configuration",org.bson.codecs.pojo.annotations;ver
+ sion="3.5.0",org.bson.conversions;version="3.5.0";uses:="org.bson,org
+ .bson.codecs.configuration",org.bson.diagnostics;version="3.5.0",org.
+ bson.internal;version="3.5.0",org.bson.io;version="3.5.0";uses:="org.
+ bson,org.bson.types",org.bson.json;version="3.5.0";uses:="org.bson,or
+ g.bson.types",org.bson.types;version="3.5.0";uses:="org.bson"
+Bundle-SymbolicName: org.mongodb.bson
+Bundle-Version: 3.5.0
+Bundle-Name: bson
+Bundle-ManifestVersion: 2
+Bnd-LastModified: 1639403264484
+Import-Package: org.slf4j;resolution:=optional;version="[1.7,2)"
+Require-Capability: osgi.ee;filter:="(&(osgi.ee=JavaSE)(version=1.6))"
+Created-By: 1.8.0_302 (Azul Systems, Inc.)
+Tool: Bnd-3.2.0.201605172007
+Build-Version: 95e5b7
+

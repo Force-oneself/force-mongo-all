@@ -1,0 +1,256 @@
+/*
+ * Copyright (c) 2008-2014 MongoDB, Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *   http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+package com.mongodb.operation
+
+import com.mongodb.MongoNamespace
+import com.mongodb.OperationFunctionalSpecification
+import com.mongodb.ReadConcern
+import com.mongodb.ReadPreference
+import com.mongodb.client.test.CollectionHelper
+import org.bson.BsonBoolean
+import org.bson.BsonDocument
+import org.bson.BsonInt32
+import org.bson.BsonInt64
+import org.bson.BsonJavaScript
+import org.bson.BsonNull
+import org.bson.BsonString
+import org.bson.Document
+import org.bson.codecs.DocumentCodec
+import spock.lang.IgnoreIf
+
+import static com.mongodb.ClusterFixture.serverVersionAtLeast
+import static java.util.concurrent.TimeUnit.MILLISECONDS
+
+class MapReduceWithInlineResultsOperationSpecification extends OperationFunctionalSpecification {
+    private final documentCodec = new DocumentCodec()
+    def mapReduceOperation = new MapReduceWithInlineResultsOperation<Document>(
+            getNamespace(),
+            new BsonJavaScript('function(){ emit( this.name , 1 ); }'),
+            new BsonJavaScript('function(key, values){ return values.length; }'),
+            documentCodec)
+
+    def expectedResults = [['_id': 'Pete', 'value': 2.0] as Document,
+                           ['_id': 'Sam', 'value': 1.0] as Document]
+
+    def setup() {
+        CollectionHelper<Document> helper = new CollectionHelper<Document>(documentCodec, getNamespace())
+        Document pete = new Document('name', 'Pete').append('job', 'handyman')
+        Document sam = new Document('name', 'Sam').append('job', 'plumber')
+        Document pete2 = new Document('name', 'Pete').append('job', 'electrician')
+        helper.insertDocuments(new DocumentCodec(), pete, sam, pete2)
+    }
+
+    def 'should have the correct defaults'() {
+        when:
+        def mapF = new BsonJavaScript('function(){ }')
+        def reduceF = new BsonJavaScript('function(key, values){ }')
+        def operation = new MapReduceWithInlineResultsOperation<Document>(helper.namespace, mapF, reduceF, documentCodec)
+
+        then:
+        operation.getMapFunction() == mapF
+        operation.getReduceFunction() == reduceF
+        operation.getFilter() == null
+        operation.getFinalizeFunction() == null
+        operation.getScope() == null
+        operation.getSort() == null
+        operation.getMaxTime(MILLISECONDS) == 0
+        operation.getLimit() == 0
+        operation.getReadConcern() == ReadConcern.DEFAULT
+        operation.getCollation() == null
+        !operation.isJsMode()
+        !operation.isVerbose()
+    }
+
+    def 'should set optional values correctly'(){
+        when:
+        def filter = new BsonDocument('filter', new BsonInt32(1))
+        def scope = new BsonDocument('scope', new BsonInt32(1))
+        def sort = new BsonDocument('sort', new BsonInt32(1))
+        def finalizeF = new BsonJavaScript('function(key, value){}')
+        def mapF = new BsonJavaScript('function(){ }')
+        def reduceF = new BsonJavaScript('function(key, values){ }')
+        def operation = new MapReduceWithInlineResultsOperation<Document>(helper.namespace, mapF, reduceF, documentCodec)
+                .filter(filter)
+                .finalizeFunction(finalizeF)
+                .scope(scope)
+                .sort(sort)
+                .jsMode(true)
+                .verbose(true)
+                .limit(20)
+                .maxTime(10, MILLISECONDS)
+                .readConcern(ReadConcern.MAJORITY)
+                .collation(defaultCollation)
+
+        then:
+        operation.getMapFunction() == mapF
+        operation.getReduceFunction() == reduceF
+        operation.getFilter() == filter
+        operation.getFinalizeFunction() == finalizeF
+        operation.getScope() == scope
+        operation.getSort() == sort
+        operation.getMaxTime(MILLISECONDS) == 10
+        operation.getLimit() == 20
+        operation.getReadConcern() == ReadConcern.MAJORITY
+        operation.getCollation() == defaultCollation
+        operation.isJsMode()
+        operation.isVerbose()
+    }
+
+    def 'should return the correct results'() {
+        given:
+        def operation = mapReduceOperation
+
+        when:
+        def results = executeAndCollectBatchCursorResults(operation, async)
+
+        then:
+        results == expectedResults
+
+        where:
+        async << [true, false]
+    }
+
+    def 'should use the ReadBindings readPreference to set slaveOK'() {
+        when:
+        def operation = new MapReduceWithInlineResultsOperation<Document>(helper.namespace, new BsonJavaScript('function(){ }'),
+                new BsonJavaScript('function(key, values){ }'), documentCodec)
+
+        then:
+        testOperationSlaveOk(operation, [3, 4, 0], readPreference, async, helper.commandResult)
+
+        where:
+        [async, readPreference] << [[true, false], [ReadPreference.primary(), ReadPreference.secondary()]].combinations()
+    }
+
+    def 'should create the expected command'() {
+        when:
+        def operation = new MapReduceWithInlineResultsOperation<Document>(helper.namespace, new BsonJavaScript('function(){ }'),
+                new BsonJavaScript('function(key, values){ }'), documentCodec)
+        def expectedCommand = new BsonDocument('mapreduce', new BsonString(helper.namespace.getCollectionName()))
+            .append('map', operation.getMapFunction())
+            .append('reduce', operation.getReduceFunction())
+            .append('out', new BsonDocument('inline', new BsonInt32(1)))
+            .append('query', new BsonNull())
+            .append('sort', new BsonNull())
+            .append('finalize', new BsonNull())
+            .append('scope', new BsonNull())
+            .append('verbose', BsonBoolean.FALSE)
+
+        then:
+        testOperation(operation, serverVersion, expectedCommand, async, helper.commandResult)
+
+        when:
+        operation.filter(new BsonDocument('filter', new BsonInt32(1)))
+                .scope(new BsonDocument('scope', new BsonInt32(1)))
+                .sort(new BsonDocument('sort', new BsonInt32(1)))
+                .finalizeFunction(new BsonJavaScript('function(key, value){}'))
+                .jsMode(true)
+                .verbose(true)
+                .limit(20)
+                .maxTime(10, MILLISECONDS)
+
+
+        expectedCommand.append('query', operation.getFilter())
+                .append('scope', operation.getScope())
+                .append('sort', operation.getSort())
+                .append('finalize', operation.getFinalizeFunction())
+                .append('jsMode', BsonBoolean.TRUE)
+                .append('verbose', BsonBoolean.TRUE)
+                .append('maxTimeMS', new BsonInt64(10))
+                .append('limit', new BsonInt32(20))
+
+        if (includeReadConcern) {
+            operation.readConcern(ReadConcern.MAJORITY)
+            expectedCommand.append('readConcern', new BsonDocument('level', new BsonString('majority')))
+        }
+        if (includeCollation) {
+            operation.collation(defaultCollation)
+            expectedCommand.append('collation', defaultCollation.asDocument())
+        }
+
+        then:
+        testOperation(operation, serverVersion, expectedCommand, async, helper.commandResult)
+
+        where:
+        serverVersion | includeReadConcern  | includeCollation | async
+        [3, 4, 0]     | true                | true             | true
+        [3, 4, 0]     | true                | true             | false
+        [3, 0, 0]     | false               | false            | true
+        [3, 0, 0]     | false               | false            | false
+    }
+
+    def 'should throw an exception when using an unsupported ReadConcern'() {
+        given:
+        def operation = new MapReduceWithInlineResultsOperation<Document>(helper.namespace, new BsonJavaScript('function(){ }'),
+                new BsonJavaScript('function(key, values){ }'), documentCodec).readConcern(readConcern)
+
+        when:
+        testOperationThrows(operation, [3, 0, 0], async)
+
+        then:
+        def exception = thrown(IllegalArgumentException)
+        exception.getMessage().startsWith('ReadConcern not supported by server version:')
+
+        where:
+        [async, readConcern] << [[true, false], [ReadConcern.MAJORITY, ReadConcern.LOCAL]].combinations()
+    }
+
+    def 'should throw an exception when using an unsupported Collation'() {
+        given:
+        def operation = new MapReduceWithInlineResultsOperation<Document>(helper.namespace, new BsonJavaScript('function(){ }'),
+                new BsonJavaScript('function(key, values){ }'), documentCodec).collation(defaultCollation)
+
+        when:
+        testOperationThrows(operation, [3, 2, 0], async)
+
+        then:
+        def exception = thrown(IllegalArgumentException)
+        exception.getMessage().startsWith('Collation not supported by server version:')
+
+        where:
+        async << [false, false]
+    }
+
+    @IgnoreIf({ !serverVersionAtLeast(3, 4) })
+    def 'should support collation'() {
+        given:
+        def document = Document.parse('{_id: 1, str: "foo"}')
+        getCollectionHelper().insertDocuments(document)
+        def operation = new MapReduceWithInlineResultsOperation<Document>(
+                namespace,
+                new BsonJavaScript('function(){ emit( this._id, this.str ); }'),
+                new BsonJavaScript('function(key, values){ return key, values; }'),
+                documentCodec)
+                .filter(BsonDocument.parse('{str: "FOO"}'))
+                .collation(caseInsensitiveCollation)
+
+        when:
+        def results = executeAndCollectBatchCursorResults(operation, async)
+
+        then:
+        results == [Document.parse('{_id: 1.0, value: "foo"}')]
+
+        where:
+        async << [true, false]
+    }
+
+    def helper = [
+            namespace: new MongoNamespace('db', 'coll'),
+            commandResult: BsonDocument.parse('{ok: 1.0, counts: {input: 1, emit: 1, output: 1}, timeMillis: 1}')
+                    .append('results', new BsonArrayWrapper([]))
+    ]
+}
